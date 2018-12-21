@@ -1,20 +1,20 @@
 package ru.itpark.domain;
 
 public class TShirt extends Product {
-    private int gender;
+    private String gender;
     private int size;
 
-    public TShirt(int id, String category, String name, int price, String description, int gender, int size) {
+    public TShirt(int id, String category, String name, int price, String description, String gender, int size) {
         super(id, category, name, price, description);
         this.gender = gender;
-        this.size = size;
+        this.size= size;
     }
 
-    public int getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(int gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 

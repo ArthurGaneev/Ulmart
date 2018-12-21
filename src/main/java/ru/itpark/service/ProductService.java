@@ -12,19 +12,22 @@ public class ProductService {
     public ProductService(ProductRepository repository) {
         this.repository = repository;
     }
+
     public void add(Product product) {
         repository.add(product);
     }
+
     public List<Product> getAll() {
         return repository.getAll();
     }
 
-    public List<Product> getSorted(Comparator<Product> comparator ) {
+    public List<Product> getSorted(Comparator<Product> comparator) {
         List<Product> result = repository.getAll();
         result.sort(comparator);
         return result;
     }
-    public ProductService findAllByName (String name) {
+
+    public ProductService findAllByName(String name) {
         ProductService service = new ProductService(new ProductRepository());
         for (Product product : getAll()) {
             if (product.getName().contains(name)) {
@@ -33,7 +36,8 @@ public class ProductService {
         }
         return service;
     }
-    public ProductService findAllByCategory (String category) {
+
+    public ProductService findAllByCategory(String category) {
         ProductService service = new ProductService(new ProductRepository());
         for (Product product : getAll()) {
             if (product.getCategory().equalsIgnoreCase(category)) {
@@ -42,12 +46,4 @@ public class ProductService {
         }
         return service;
     }
-
-
-
-
-
-
-
-
 }

@@ -11,10 +11,8 @@ public class ProductRepository {
     public void add(Product item) {
         items.add(item);
     }
+
     public List<Product> getAll() {
         return items;
     }
-
-
-
 }
