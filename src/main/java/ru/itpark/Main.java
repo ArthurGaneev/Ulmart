@@ -3,7 +3,6 @@ package ru.itpark;
 import ru.itpark.comparator.NameAscComparator;
 import ru.itpark.comparator.PriceAscComparator;
 import ru.itpark.domain.Computer;
-import ru.itpark.domain.Product;
 import ru.itpark.domain.Smartphone;
 import ru.itpark.domain.TShirt;
 import ru.itpark.repository.ProductRepository;
