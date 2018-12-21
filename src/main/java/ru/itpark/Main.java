@@ -15,7 +15,7 @@ public class Main {
         service.add(new Smartphone(1, "Smartphone", "iPhone 8", 45_000, "...", "Apple", "Silver"));
         service.add(new Smartphone(2, "Smartphone", "iPhone X", 60_000, "...", "Apple", "Gold"));
         service.add(new Smartphone(3, "Smartphone", "Meizu", 60_000, "...", "Apple", "Gold"));
-        service.add(new Computer(4, "c", "Samsung", 40_000, "...", "Korea", "Black"));
+        service.add(new Computer(4, "Computer", "Samsung", 40_000, "...", "Korea", "Black"));
         service.add(new Computer(5, "Computer", "Asus", 50_000, "...", "Taiwan", "White"));
         service.add(new TShirt(6, "TShirt", "Adidas", 2_400, "...", "Male", 50));
         service.add(new TShirt(7, "TShirt", "Nikes", 2_400, "...", "Male", 50));
