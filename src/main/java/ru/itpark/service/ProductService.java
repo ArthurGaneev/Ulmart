@@ -3,6 +3,7 @@ package ru.itpark.service;
 import ru.itpark.domain.Product;
 import ru.itpark.repository.ProductRepository;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -27,23 +28,27 @@ public class ProductService {
         return result;
     }
 
-    public ProductService findAllByName(String name) {
-        ProductService service = new ProductService(new ProductRepository());
-        for (Product product : getAll()) {
-            if (product.getName().contains(name)) {
-                service.add(product);
+    public List<Product> findAllByName(String name) {
+
+        List<Product> result = new ArrayList<>();
+        for (Product product : repository.getAll()) {
+            String productName = product.getName();
+            if (productName.contains(name)) {
+                result.add(product);
             }
         }
-        return service;
+        return result;
     }
 
-    public ProductService findAllByCategory(String category) {
-        ProductService service = new ProductService(new ProductRepository());
-        for (Product product : getAll()) {
-            if (product.getCategory().equalsIgnoreCase(category)) {
-                service.add(product);
+    public List<Product> findAllByCategory(String category) {
+        List<Product> result = new ArrayList<>();
+        for (Product product : repository.getAll()) {
+            String productCategory = product.getCategory();
+
+            if (productCategory.equalsIgnoreCase(category)) {
+                result.add(product);
             }
         }
-        return service;
+        return result;
     }
 }
