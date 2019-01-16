@@ -1,6 +1,6 @@
 package ru.itpark;
 
-import ru.itpark.comparator.NameAscComparator;
+
 import ru.itpark.comparator.PriceAscComparator;
 import ru.itpark.domain.Computer;
 import ru.itpark.domain.Product;
